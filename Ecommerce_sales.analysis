@@ -1,0 +1,125 @@
+# E-Commerce Sales Analysis
+
+
+## Introduction
+
+#This project analyzes 20,000+ e-commerce transactions using Python, Pandas and Matplotlib to extract business insights.
+
+## Import Libraries
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+## Load Dataset
+
+df = pd.read_csv(r"ecommerce_dataset.csv")
+
+df.head()
+
+
+## Data Cleaning
+
+
+df["order_date"] = pd.to_datetime(df["order_date"])
+
+df.isnull().sum()
+
+df.drop_duplicates()
+
+df.dropna()
+
+
+
+## Exploratory Data Analysis (EDA
+
+
+total_revenue = df["total_sales"].sum()
+
+total_revenue
+
+
+
+
+
+# Revenue by Customer_state
+
+
+plt.figure(figsize=(12,6))
+
+state_rev = df.groupby("customer_state")["total_sales"].sum().sort_values(ascending=False)
+
+plt.bar(state_rev.index, state_rev.values)
+plt.title("State-wise Revenue", fontsize=16)
+plt.xlabel("State", fontsize=12)
+plt.ylabel("Revenue", fontsize=12)
+plt.xticks(rotation=45, fontsize=10)
+plt.tight_layout()
+
+plt.show()
+
+
+##Month wise revenue
+
+df["month"] = df["order_date"].dt.to_period("M").astype(str)
+monthly = df.groupby("month")["total_sales"].sum().reset_index()
+
+
+plt.figure(figsize=(10,5))
+plt.plot(monthly["month"], monthly["total_sales"], marker="o")
+plt.xticks(rotation=45)
+plt.title("Monthly Revenue Trend")
+plt.xlabel("Month")
+plt.ylabel("Revenue")
+plt.tight_layout()
+plt.show()
+
+
+##Week_day wise order_count
+
+
+df["weekday"] = df["order_date"].dt.day_name()
+weekday = df["weekday"].value_counts()
+
+plt.figure(figsize=(8,5))
+weekday.plot(kind="bar")
+plt.title("Orders Per Weekday")
+plt.xlabel("Weekday")
+plt.ylabel("Order Count")
+plt.tight_layout()
+plt.show()
+
+
+##Payment_method 
+
+pay_count = df["payment_method"].value_counts()
+
+plt.figure(figsize=(6,6))
+pay_count.plot(kind="pie", autopct="%1.1f%%", ylabel="")
+plt.title("Payment Method Share")
+plt.tight_layout()
+plt.show()
+
+
+
+## Top 10 best selling product
+
+
+top_prod = df.groupby("product")["total_sales"].sum().sort_values(ascending=False).head(10)
+
+plt.figure(figsize=(10,6))
+top_prod.plot(kind="barh")
+plt.title("Top 10 Products by Revenue")
+plt.xlabel("Revenue")
+plt.tight_layout()
+plt.show()
+ 
+
+
+
+
+## Visualizations
+
+## Key Insights
+
+## Conclusion
