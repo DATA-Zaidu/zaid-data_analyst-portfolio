@@ -44,7 +44,7 @@ This analysis mirrors the type of work performed by **Data Analysts / Business I
 ## 📊 Analysis Overview
 
 ### 1️⃣ Ride Volume Trends
-![Total Rides Trend](visuals/total_rides_trend.png)
+![Total Rides Trend](Visuals/total_rides_trend.png)
 
 - Total rides increase steadily from **January → March**
 - **Sharp dip in April**, followed by a **major spike in May**
