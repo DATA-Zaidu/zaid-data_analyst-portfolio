@@ -149,5 +149,4 @@ This project demonstrates:
 
 **Note**: This project focuses on descriptive and diagnostic analytics and complements advanced SQL and LTV-based projects in the portfolio.*
 
-## 📁 Project Structure
 
