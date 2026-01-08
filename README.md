@@ -57,7 +57,7 @@ This analysis mirrors the type of work performed by **Data Analysts / Business I
 ---
 
 ### 2️⃣ Members vs Casual Riders
-![Members vs Casual](visuals/member_vs_casual_rides.png)
+![Members vs Casual](Visuals/member_vs_casual_rides.png)
 
 - **Members dominate total ridership every month**
 - Strongest member usage observed in **March and May**
@@ -69,7 +69,7 @@ This analysis mirrors the type of work performed by **Data Analysts / Business I
 ---
 
 ### 3️⃣ Ride Duration Analysis
-![Avg Ride Duration](visuals/avg_ride_duration.png)
+![Avg Ride Duration](Visuals/avg_ride_duration.png)
 
 - **Casual riders**:
   - 25–30 minutes (Jan–Mar)
