@@ -124,12 +124,19 @@ This analysis mirrors the type of work performed by **Data Analysts / Business I
 ## 📁 Project Structure
 
 cyclistic-bike-share-analysis/
+
 ├── README.md
+
 ├── analysis/
+
 │ └── Cyclist_Data_Analysis.pdf
+
 ├── visuals/
+
 │ ├── total_rides_trend.png
+
 │ ├── member_vs_casual_rides.png
+
 │ └── avg_ride_duration.png
 
 yaml
